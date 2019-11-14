@@ -6,6 +6,11 @@ env:
     - DOCKER_REPO=benzbrake/goflyway
       DOCKER_TAG=1.0
       BUILD_DIRECTORY=goflyway
+      BUILD_ARGS_FILE=build_args_v1
+    - DOCKER_REPO=benzbrake/goflyway
+      DOCKER_TAG=2.0
+      TAG_LATEST=true
+      BUILD_DIRECTORY=goflyway
 
 sudo: required
   

@@ -11,6 +11,7 @@ env:
       DOCKER_TAG=2.0
       TAG_LATEST=true
       BUILD_DIRECTORY=goflyway
+    - BUILD_DIRECTORY=brook
 
 sudo: required
   

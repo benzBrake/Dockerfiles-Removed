@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+# Call custom build script
+if [[ -f ${BUILD_DIRECTORY}/build.sh ]]; then
+    chmod +x ${BUILD_DIRECTORY}/build.sh
+    ${BUILD_DIRECTORY}/build.sh
+    exit $?
+fi
 # Load build args
 if [[ -f ${BUILD_DIRECTORY}/${BUILD_ARGS_FILE-build_args} ]]; then
     BUILD_ARGS=$(cat ${BUILD_DIRECTORY}/${BUILD_ARGS_FILE-build_args} | sed "s#^#--build-arg #")
